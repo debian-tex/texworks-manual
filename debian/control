@@ -1,0 +1,28 @@
+Source: texworks-manual
+Section: editors
+Priority: extra
+Maintainer: Debian QA Group <packages@qa.debian.org>
+Build-Depends: texlive-latex-base, 
+	texlive-latex-recommended,
+	texlive-fonts-recommended,
+	texlive-latex-extra,
+	texlive-lang-french,
+	lmodern
+Standards-Version: 3.9.6
+Homepage: http://www.tug.org/texworks/
+Vcs-Git: git://anonscm.debian.org/collab-maint/texworks-manual.git
+Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/texworks-manual.git
+
+Package: texworks-help-en
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: texworks
+Description: English help files for TeXworks
+ For furter information, see http://tug.org/texworks/
+
+Package: texworks-help-fr
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: texworks
+Description: French help files for TeXworks
+ For furter information, see http://tug.org/texworks/

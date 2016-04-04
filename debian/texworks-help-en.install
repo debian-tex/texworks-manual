@@ -1,1 +1,2 @@
-usr/share/texworks-help/en
+src/en/manual.pdf usr/share/doc/texworks-help/en
+src/en/html/* usr/share/texworks-help/en

@@ -1,3 +1,9 @@
+texworks-manual (20150506-2) unstable; urgency=medium
+
+  * bump standards version, no changes necessary
+
+ -- Norbert Preining <preining@debian.org>  Mon, 01 Aug 2016 22:29:03 +0900
+
 texworks-manual (20150506-1) unstable; urgency=medium
 
   * Imported Upstream version 20150506

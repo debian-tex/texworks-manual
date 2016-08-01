@@ -1,8 +1,10 @@
 texworks-manual (20150506-2) unstable; urgency=medium
 
   * bump standards version, no changes necessary
+  * make sure not to create files in ~ and make sbuild is happy 
+    (Closes: #832871)
 
- -- Norbert Preining <preining@debian.org>  Mon, 01 Aug 2016 22:29:03 +0900
+ -- Norbert Preining <preining@debian.org>  Mon, 01 Aug 2016 22:33:47 +0900
 
 texworks-manual (20150506-1) unstable; urgency=medium
 

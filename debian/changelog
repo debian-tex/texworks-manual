@@ -2,8 +2,9 @@ texworks-manual (20150506-3) unstable; urgency=medium
 
   * update VCS, my email, and standards version
   * fix build errors due to LANG setting during build
+  * switch from extra to option priority
 
- -- Norbert Preining <norbert@preining.info>  Sat, 02 Mar 2019 15:14:52 +0900
+ -- Norbert Preining <norbert@preining.info>  Sat, 02 Mar 2019 15:18:33 +0900
 
 texworks-manual (20150506-2) unstable; urgency=medium
 

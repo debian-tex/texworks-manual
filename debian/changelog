@@ -1,3 +1,9 @@
+texworks-manual (20150506-3) unstable; urgency=medium
+
+  * update VCS, my email, and standards version
+
+ -- Norbert Preining <norbert@preining.info>  Sat, 02 Mar 2019 15:08:13 +0900
+
 texworks-manual (20150506-2) unstable; urgency=medium
 
   * bump standards version, no changes necessary

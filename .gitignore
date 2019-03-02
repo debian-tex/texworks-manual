@@ -25,3 +25,4 @@ src/*/html/*.sty
 src/*/html/images
 /html/
 /pdf/
+/.pc/

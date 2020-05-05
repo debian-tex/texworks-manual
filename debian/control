@@ -3,8 +3,8 @@ Section: editors
 Priority: optional
 Maintainer: Debian TeX maintainers <debian-tex-maint@lists.debian.org>
 Uploaders: Norbert Preining <norbert@preining.info>
-Build-Depends: debhelper (>= 9)
-Build-Depends-Indep: texlive-latex-base, 
+Build-Depends: debhelper-compat (= 12)
+Build-Depends-Indep: texlive-latex-base,
 	texlive-latex-recommended,
 	texlive-fonts-recommended,
 	texlive-latex-extra,
@@ -15,7 +15,7 @@ Build-Depends-Indep: texlive-latex-base,
 	lmodern,
 	imagemagick
 Standards-Version: 4.2.1
-Homepage: http://www.tug.org/texworks/
+Homepage: https://www.tug.org/texworks/
 Vcs-Git: https://github.com/debian-tex/texworks-manual.git
 Vcs-Browser: https://github.com/debian-tex/texworks-manual
 

@@ -1,3 +1,12 @@
+texworks-manual (20150506-5) UNRELEASED; urgency=medium
+
+  * Trim trailing whitespace.
+  * Use secure URI in Homepage field.
+  * Bump debhelper from deprecated 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Tue, 05 May 2020 11:09:31 +0000
+
 texworks-manual (20150506-4) unstable; urgency=medium
 
   * source only upload
@@ -15,7 +24,7 @@ texworks-manual (20150506-3) unstable; urgency=medium
 texworks-manual (20150506-2) unstable; urgency=medium
 
   * bump standards version, no changes necessary
-  * make sure not to create files in ~ and make sbuild is happy 
+  * make sure not to create files in ~ and make sbuild is happy
     (Closes: #832871)
 
  -- Norbert Preining <preining@debian.org>  Mon, 01 Aug 2016 22:33:47 +0900

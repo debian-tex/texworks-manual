@@ -4,6 +4,8 @@ texworks-manual (20150506-5) UNRELEASED; urgency=medium
   * Use secure URI in Homepage field.
   * Bump debhelper from deprecated 9 to 12.
   * Set debhelper-compat version in Build-Depends.
+  * Apply multi-arch hints.
+    + texworks-help-en, texworks-help-fr: Add Multi-Arch: foreign.
 
  -- Debian Janitor <janitor@jelmer.uk>  Tue, 05 May 2020 11:09:31 +0000
 

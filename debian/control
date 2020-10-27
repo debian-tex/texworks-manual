@@ -23,6 +23,7 @@ Package: texworks-help-en
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: texworks
+Multi-Arch: foreign
 Description: English help files for TeXworks
  For furter information, see http://tug.org/texworks/
 
@@ -30,5 +31,6 @@ Package: texworks-help-fr
 Architecture: all
 Depends: ${misc:Depends}
 Recommends: texworks
+Multi-Arch: foreign
 Description: French help files for TeXworks
  For furter information, see http://tug.org/texworks/

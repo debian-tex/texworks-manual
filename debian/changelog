@@ -15,6 +15,7 @@ texworks-manual (20150506-5) UNRELEASED; urgency=medium
   * Lintian:
     Override: I: package-contains-documentation-outside-usr-share-doc
     I: texworks-manual source: duplicate-long-description
+    I: texworks-manual source: quilt-patch-missing-description fix-build-lang
 
  -- Hilmar Preusse <hille42@web.de>  Wed, 27 Jan 2021 13:41:08 +0100
 

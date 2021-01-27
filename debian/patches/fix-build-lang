@@ -1,3 +1,9 @@
+Description: Work around LANG induced build errors of lualatex.
+Origin: Norbert Preining <norbert@preining.info>
+Forwarded: Not done, could be done. Check new upstream release.
+Author: Norbert Preining <norbert@preining.info>
+Last-Update: 20190302
+
 ---
  src/en/Makefile |    6 +++---
  src/fr/Makefile |    6 +++---

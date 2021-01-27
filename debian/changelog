@@ -14,6 +14,7 @@ texworks-manual (20150506-5) UNRELEASED; urgency=medium
   * We are "Debian TeX Task Force"
   * Lintian:
     Override: I: package-contains-documentation-outside-usr-share-doc
+    I: texworks-manual source: duplicate-long-description
 
  -- Hilmar Preusse <hille42@web.de>  Wed, 27 Jan 2021 13:41:08 +0100
 

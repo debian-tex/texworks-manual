@@ -26,6 +26,7 @@ Depends: ${misc:Depends}
 Recommends: texworks
 Multi-Arch: foreign
 Description: English help files for TeXworks
+ This is the manual for program suite TeXworks (english).
  For furter information, see http://tug.org/texworks/
 
 Package: texworks-help-fr
@@ -34,4 +35,5 @@ Depends: ${misc:Depends}
 Recommends: texworks
 Multi-Arch: foreign
 Description: French help files for TeXworks
+ This is the manual for program suite TeXworks (french).
  For furter information, see http://tug.org/texworks/

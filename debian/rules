@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
-TEXMFVAR := `mktemp -d`
-TEXMFCONFIG := `mktemp -d`
+TEXMFVAR := $(mktemp -d)
+TEXMFCONFIG := $(mktemp -d)
 export TEXMFVAR
 export TEXMFCONFIG
 

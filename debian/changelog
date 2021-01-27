@@ -1,5 +1,6 @@
 texworks-manual (20150506-5) UNRELEASED; urgency=medium
 
+  [ Debian Janitor ]
   * Trim trailing whitespace.
   * Use secure URI in Homepage field.
   * Bump debhelper from deprecated 9 to 12.
@@ -7,7 +8,12 @@ texworks-manual (20150506-5) UNRELEASED; urgency=medium
   * Apply multi-arch hints.
     + texworks-help-en, texworks-help-fr: Add Multi-Arch: foreign.
 
- -- Debian Janitor <janitor@jelmer.uk>  Tue, 05 May 2020 11:09:31 +0000
+  [ Hilmar Preusse ]
+  * Fix broken "mktemp -d" in d/rules
+  * Add me to uploaders
+  * We are "Debian TeX Task Force"
+
+ -- Hilmar Preusse <hille42@web.de>  Wed, 27 Jan 2021 13:41:08 +0100
 
 texworks-manual (20150506-4) unstable; urgency=medium
 

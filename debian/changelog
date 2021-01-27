@@ -12,6 +12,7 @@ texworks-manual (20150506-5) UNRELEASED; urgency=medium
   * Fix broken "mktemp -d" in d/rules
   * Add me to uploaders
   * We are "Debian TeX Task Force"
+  * d/watch file: first attempt.
   * Lintian:
     Override: I: package-contains-documentation-outside-usr-share-doc
     I: texworks-manual source: duplicate-long-description

@@ -1,4 +1,4 @@
-texworks-manual (20150506-5) UNRELEASED; urgency=medium
+texworks-manual (20150506-5) unstable; urgency=medium
 
   [ Debian Janitor ]
   * Trim trailing whitespace.
@@ -14,13 +14,14 @@ texworks-manual (20150506-5) UNRELEASED; urgency=medium
   * We are "Debian TeX Task Force"
   * d/watch file: by Eriberto Mota <eriberto@debian.org>. Thanks!
   * Bump Standards version to 4.5.1, no changes needed.
+  * First draft of dep5 copyright.
   * Lintian:
     Override: I: package-contains-documentation-outside-usr-share-doc
     I: texworks-manual source: duplicate-long-description
     I: texworks-manual source: quilt-patch-missing-description fix-build-lang
     P: silent-on-rules-requiring-root
 
- -- Hilmar Preusse <hille42@web.de>  Wed, 27 Jan 2021 13:41:08 +0100
+ -- Hilmar Preusse <hille42@web.de>  Thu, 28 Jan 2021 23:51:10 +0100
 
 texworks-manual (20150506-4) unstable; urgency=medium
 

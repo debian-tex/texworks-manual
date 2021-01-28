@@ -13,6 +13,7 @@ texworks-manual (20150506-5) UNRELEASED; urgency=medium
   * Add me to uploaders
   * We are "Debian TeX Task Force"
   * d/watch file: first attempt.
+  * Bump Standards version to 4.5.1, no changes needed.
   * Lintian:
     Override: I: package-contains-documentation-outside-usr-share-doc
     I: texworks-manual source: duplicate-long-description

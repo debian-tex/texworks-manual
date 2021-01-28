@@ -15,7 +15,7 @@ Build-Depends-Indep: texlive-latex-base,
 	ghostscript,
 	lmodern,
 	imagemagick
-Standards-Version: 4.2.1
+Standards-Version: 4.5.1
 Rules-Requires-Root: no
 Homepage: https://www.tug.org/texworks/
 Vcs-Git: https://github.com/debian-tex/texworks-manual.git

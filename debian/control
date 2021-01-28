@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian TeX Task Force <debian-tex-maint@lists.debian.org>
 Uploaders: Norbert Preining <norbert@preining.info>,
 	Hilmar Preusse <hille42@web.de>
-Build-Depends: debhelper-compat (= 12)
+Build-Depends: debhelper-compat (= 13)
 Build-Depends-Indep: texlive-latex-base,
 	texlive-latex-recommended,
 	texlive-fonts-recommended,

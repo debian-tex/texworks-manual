@@ -3,7 +3,7 @@ texworks-manual (20150506-5) UNRELEASED; urgency=medium
   [ Debian Janitor ]
   * Trim trailing whitespace.
   * Use secure URI in Homepage field.
-  * Bump debhelper from deprecated 9 to 12.
+  * Bump debhelper from deprecated 9 to 13.
   * Set debhelper-compat version in Build-Depends.
   * Apply multi-arch hints.
     + texworks-help-en, texworks-help-fr: Add Multi-Arch: foreign.

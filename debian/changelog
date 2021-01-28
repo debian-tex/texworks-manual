@@ -12,7 +12,7 @@ texworks-manual (20150506-5) UNRELEASED; urgency=medium
   * Fix broken "mktemp -d" in d/rules
   * Add me to uploaders
   * We are "Debian TeX Task Force"
-  * d/watch file: first attempt.
+  * d/watch file: by Eriberto Mota <eriberto@debian.org>. Thanks!
   * Bump Standards version to 4.5.1, no changes needed.
   * Lintian:
     Override: I: package-contains-documentation-outside-usr-share-doc

@@ -1,3 +1,10 @@
+texworks-manual (20150506-6) UNRELEASED; urgency=medium
+
+  * Lintian:
+    P: no-dep5-copyright
+
+ -- Hilmar Preusse <hille42@web.de>  Sat, 30 Jan 2021 00:14:00 +0100
+
 texworks-manual (20150506-5) unstable; urgency=medium
 
   [ Debian Janitor ]

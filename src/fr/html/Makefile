@@ -1,4 +1,4 @@
-LANG=$(notdir $(abspath ..))
+MANUAL_LANG=$(notdir $(abspath ..))
 
 Logos = images/Linux.png images/Mac.png images/Windows.png images/TeXworks.png images/example.png
 EpsFromPdf = images/MacCmdKey.eps images/MacOptKey.eps images/LMB.eps images/RMB.eps
@@ -37,19 +37,19 @@ index.tex : ../manuel.tex
 
 images/Linux.png : ../images/Linux.pdf
 	@mkdir -p images
-	@convert ../images/Linux.pdf -resize 48x48 images/Linux.png $(SUPRESSOUT)
+	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
 images/Mac.png : ../images/Mac.pdf
 	@mkdir -p images
-	@convert ../images/Mac.pdf -resize 48x48 images/Mac.png $(SUPRESSOUT)
+	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
 images/Windows.png : ../images/Windows.pdf
 	@mkdir -p images
-	@convert ../images/Windows.pdf -resize 48x48 images/Windows.png $(SUPRESSOUT)
+	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
 images/TeXworks.png : ../images/TeXworks.png
 	@mkdir -p images
 	@convert ../images/TeXworks.png -resize 100x100 images/TeXworks.png $(SUPRESSOUT)
 images/example.png : ../images/example.pdf
 	@mkdir -p images
-	@convert -density 300 "$<"  -resize 48x48 "$@" $(SUPRESSOUT)
+	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
 images/%.eps : ../images/%.pdf
 	@echo "Creating image $@ (from $<)"
 	@mkdir -p images
@@ -57,11 +57,13 @@ images/%.eps : ../images/%.pdf
 images/%.eps : ../images/%.png
 	@echo "Creating image $@ (from $<)"
 	@mkdir -p images
-	@convert "$<" "$@" $(SUPRESSOUT)
+	# Some versions of convert refuse to produce .eps files due to security concerns
+	@convert "$<" "$@" $(SUPRESSOUT) 2$(SUPRESSOUT) || convert "$<" ppm: | pnmtops -noturn | eps2eps - "$@"
 images/%.eps : ../images/%.jpg
 	@echo "Creating image $@ (from $<)"
 	@mkdir -p images
-	@convert "$<" "$@" $(SUPRESSOUT)
+	# Some versions of convert refuse to produce .eps files due to security concerns
+	@convert "$<" "$@" $(SUPRESSOUT) 2$(SUPRESSOUT) || convert "$<" ppm: | pnmtops -noturn | eps2eps - "$@"
 
 
 index.ind : images $(SOURCES) manual.cfg tex4ht.env
@@ -84,8 +86,8 @@ dist-clean : clean
 dist : dist-html
 
 dist-html : index.html tidy.cfg manual.css
-	@mkdir -p ../../../html/TeXworks-manual/$(LANG)/images
-	@$(CP) images/*.png ../../../html/TeXworks-manual/$(LANG)/images
-	@$(CP) *.html *.css tw-help-title.txt ../../../html/TeXworks-manual/$(LANG)/
-	@tidy -config tidy.cfg ../../../html/TeXworks-manual/$(LANG)/*.html || true
+	@mkdir -p ../../../html/TeXworks-manual/$(MANUAL_LANG)/images
+	@$(CP) images/*.png ../../../html/TeXworks-manual/$(MANUAL_LANG)/images
+	@$(CP) *.html *.css tw-help-title.txt ../../../html/TeXworks-manual/$(MANUAL_LANG)/
+	@tidy -config tidy.cfg ../../../html/TeXworks-manual/$(MANUAL_LANG)/*.html || true
 

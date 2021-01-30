@@ -1,9 +1,9 @@
-texworks-manual (20150506-6) UNRELEASED; urgency=medium
+texworks-manual (20150506-6) unstable; urgency=medium
 
-  * Lintian:
-    P: no-dep5-copyright
+  * Lintian: P: no-dep5-copyright
+  * Modify d/watch file to make it work using uscan from Debian buster.
 
- -- Hilmar Preusse <hille42@web.de>  Sat, 30 Jan 2021 00:14:00 +0100
+ -- Hilmar Preusse <hille42@web.de>  Sat, 30 Jan 2021 16:40:52 +0100
 
 texworks-manual (20150506-5) unstable; urgency=medium
 

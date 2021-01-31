@@ -1,3 +1,10 @@
+texworks-manual (20200329-1) UNRELEASED; urgency=medium
+
+  * New upstream version.
+    - Remove fix-build-lang patch.
+
+ -- Hilmar Preusse <hille42@web.de>  Sun, 31 Jan 2021 00:08:18 +0100
+
 texworks-manual (20150506-6) unstable; urgency=medium
 
   * Lintian: P: no-dep5-copyright

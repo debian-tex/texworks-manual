@@ -2,6 +2,7 @@ texworks-manual (20200329-1) UNRELEASED; urgency=medium
 
   * New upstream version.
     - Remove fix-build-lang patch.
+    - override_dh_auto_clean, run "make dist-clean".
 
  -- Hilmar Preusse <hille42@web.de>  Sun, 31 Jan 2021 00:08:18 +0100
 

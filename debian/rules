@@ -10,3 +10,6 @@ export TEXMFCONFIG
 
 override_dh_compress:
 	dh_compress -X.pdf
+
+override_dh_auto_clean:
+	$(MAKE) dist-clean

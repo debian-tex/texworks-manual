@@ -1,10 +1,10 @@
-texworks-manual (20200329-1) UNRELEASED; urgency=medium
+texworks-manual (20200329-1) unstable; urgency=medium
 
   * New upstream version.
     - Remove fix-build-lang patch.
     - override_dh_auto_clean, run "make dist-clean".
 
- -- Hilmar Preusse <hille42@web.de>  Sun, 31 Jan 2021 00:08:18 +0100
+ -- Hilmar Preusse <hille42@web.de>  Sun, 31 Jan 2021 11:07:55 +0100
 
 texworks-manual (20150506-6) unstable; urgency=medium
 

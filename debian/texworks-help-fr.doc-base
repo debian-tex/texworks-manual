@@ -1,0 +1,10 @@
+Document: texworks-help-fr-manuel
+Title: A short manual for TEXworks
+Author: Alain Delmotte, Stefan Löffler
+Abstract: French help files for TeXworks
+ This is the manual for program suite TeXworks (French).
+ For further information, see http://tug.org/texworks/
+Section: Text
+
+Format: PDF
+Files: /usr/share/doc/texworks-help-fr/manuel.pdf

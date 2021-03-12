@@ -28,7 +28,7 @@ Recommends: texworks
 Multi-Arch: foreign
 Description: English help files for TeXworks
  This is the manual for program suite TeXworks (English).
- For furter information, see http://tug.org/texworks/
+ For further information, see http://tug.org/texworks/
 
 Package: texworks-help-fr
 Architecture: all
@@ -37,4 +37,4 @@ Recommends: texworks
 Multi-Arch: foreign
 Description: French help files for TeXworks
  This is the manual for program suite TeXworks (French).
- For furter information, see http://tug.org/texworks/
+ For further information, see http://tug.org/texworks/

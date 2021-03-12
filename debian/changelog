@@ -1,7 +1,16 @@
+texworks-manual (20210308-1) unstable; urgency=medium
+
+  * New upstream version.
+    - doc-base integration
+    - fix typo in package description.
+    - Remove fix-build-lang patch
+
+ -- Hilmar Preusse <hille42@web.de>  Fri, 12 Mar 2021 20:24:59 +0100
+
 texworks-manual (20200329-1) unstable; urgency=medium
 
   * New upstream version.
-    - Remove fix-build-lang patch.
+    - Disable fix-build-lang patch.
     - override_dh_auto_clean, run "make dist-clean".
 
  -- Hilmar Preusse <hille42@web.de>  Sun, 31 Jan 2021 11:07:55 +0100

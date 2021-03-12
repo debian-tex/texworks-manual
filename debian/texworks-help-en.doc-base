@@ -1,0 +1,10 @@
+Document: texworks-help-en-manual
+Title: A short manual for TEXworks
+Author: Alain Delmotte, Stefan Löffler
+Abstract: English help files for TeXworks
+ This is the manual for program suite TeXworks (English).
+ For further information, see http://tug.org/texworks/
+Section: Text
+
+Format: PDF
+Files: /usr/share/doc/texworks-help-en/manual.pdf

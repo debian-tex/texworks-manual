@@ -44,7 +44,7 @@ blue;I
 
 L'utilisation des raccourcis clavier\index{raccourcis clavier} facilite grandement la saisie de la source et la gestion de celle-ci et de la vue. pour des actions fréquemment répétées, leur utilisation est beaucoup plus efficace que l'utilisation de la souris sur des boutons de barres d'outils.
 
-Nous donnons ci-après les raccourcis clavier pour le travail dans la source et pour celui dans la vue. Notez que sous Mac OS X, \verb|Ctrl| fait en réalité référence à la \emph{touche Commande}, qui est le modificateur habituel des raccourcis clavier. Bien que les raccourcis clavier soient spécifiés avec \verb|Ctrl|, celui-ci apparaîtra comme la \emph{touche Commande} dans les menus. (Pour faire vraiment référence à la \emph{touche Contrôle} sur la Mac, le fichier de définitions doit utiliser le nom \verb|Meta|.)
+Nous donnons ci-après les raccourcis clavier pour le travail dans la source et pour celui dans la vue. Notez que sous macOS, \verb|Ctrl| fait en réalité référence à la \emph{touche Commande}, qui est le modificateur habituel des raccourcis clavier. Bien que les raccourcis clavier soient spécifiés avec \verb|Ctrl|, celui-ci apparaîtra comme la \emph{touche Commande} dans les menus. (Pour faire vraiment référence à la \emph{touche Contrôle} sur la Mac, le fichier de définitions doit utiliser le nom \verb|Meta|.)
 
 Notez que les définitions ci-dessous sont celles par défaut de la version originelle en anglais. Des langues différentes peuvent utiliser des raccourcis différents.%, ainsi que quelques changements pour la version francisée du logiciel \footnote{du moins une version de travail des raccourcis francisés, car il y a des problèmes suivant les systèmes et les habitudes des utilisateurs!}; en effet la combinaison de \verb|Ctrl| et de \verb|\| ou \verb|[| n'est pas possible sur un clavier Azerty. Lorsque les raccourcis sont les mêmes, \og --\fg{} est mis dans la colonne francisée.
 
@@ -108,8 +108,11 @@ Pour la fenêtre source:
 Pour la fenêtre de vue:
 \input menuactionsPDFDocument.tex
 
-\subsection{Autres actions}
-En plus des actions listées ci-dessus, il y a aussi des actions pour les scripts. Celles-ci sont dynamiques par nature, comme elles sont créées à la volée pour les scripts disponibles (elles pourront changer lorsque vous installerez, supprimerez ou modifierez des scripts.) Toutes ces actions sont de la forme \verb*|Script: <script_titre>|, où \verb*|<script_titre>| doit être modifié de façon appropriée. Si vous avez un script qui apparaît comme \verb|Mon Script|, l'action correspondante sera appelée \verb*|Script: Mon Script|.
+\subsection{Actions pour les outils de composition}
+En plus des actions statiques listées ci-dessus, il y a aussi des actions pour activer un outil de composition. Toutes ces actions sont de la forme générale \verb*|actionTypesetTool<nom_outil| où \verb*|<nom_outil>| doit être remplacé de façon appropriée. Par exemple, le nom correspondant à l'outil de composition \verb*|pdfLaTeX| est \verb*|actionTypesetToolpdfLaTeX|, celui correspondant à \verb*|Mon outil| est \verb*|actionTypesetToolMon outil|.\footnote{Noter que certains caractères (comme \verb*|=| et \verb*|;| sont réservés dans les fichiers ini et doivent avoir un échappement par \verb*|%XX|, où \verb*|XX| est le code hexadécimal ASCII correspondant. Par exemple, le nom correspondant à \verb*|A=B| est \verb*|actionTypesetToolA%3DB|.}
+
+\subsection{Actions pour les scripts}
+Il y a aussi des actions pour les scripts. Elles sont dynamiques par nature, comme elles sont créées à la volée pour les scripts disponibles (qui peuvent changer quand vous installez des scripts, les retirez ou changez les paramètres.) Toutes ces actions sont de la forme \verb*|Script: <titre_script>|, où \verb*|<titre_script>| doit être remplacé de façon appropriée. Si vous avez un script qui se nomme \verb|Mon Script|, par exemple, l'action correspondante sera appelée \verb*|Script: Mon Script|.
 
 
 \section{Les mots clé de complétion}

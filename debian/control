@@ -11,10 +11,11 @@ Build-Depends-Indep: texlive-latex-base,
 	texlive-latex-extra,
 	texlive-lang-french,
 	texlive-luatex,
-	tex4ht,
+	texlive-plain-generic,
 	ghostscript,
 	lmodern,
-	imagemagick
+	imagemagick,
+	netpbm
 Standards-Version: 4.5.1
 Rules-Requires-Root: no
 Homepage: https://www.tug.org/texworks/

@@ -3,6 +3,8 @@ texworks-manual (20210308-2) UNRELEASED; urgency=medium
   * Add b-d netpbm, to solve FTBFS on Ubuntu (Closes: #986686).
   * Replace b-d (-tex4ht, +texlive-plain-generic)
   * Set upstream metadata fields: Bug-Database, Bug-Submit.
+  * Add patch lintian_national-encoding.diff to have UTF-8 encoded
+    HTML pages.
 
  -- Hilmar Preusse <hille42@web.de>  Sat, 10 Apr 2021 16:23:30 +0200
 

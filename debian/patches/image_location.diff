@@ -1,0 +1,26 @@
+Index: texworks-manual/src/en/html/Makefile
+===================================================================
+--- texworks-manual.orig/src/en/html/Makefile	2021-04-14 00:00:32.788195315 +0200
++++ texworks-manual/src/en/html/Makefile	2021-04-14 00:01:35.728048956 +0200
+@@ -6,7 +6,7 @@
+ 
+ IMAGES = $(Logos) $(EpsFromPdf) $(EpsFromPng)
+ 
+-HTOPTS = "manual,info,2,imgdir:images/,sec-filename,next,index=2,url-enc,charset=utf-8" " -cmozhtf -utf8" "-S*"
++HTOPTS = "manual,info,2,sec-filename,next,index=2,url-enc,charset=utf-8" " -cmozhtf -utf8" "-S*"
+ 
+ # Ghostscript 9.14/9.15 dropped the 'epswrite' output device in favor of the new
+ # 'eps2write' output device. Prefer the latter, but fallback to the former for
+Index: texworks-manual/src/fr/html/Makefile
+===================================================================
+--- texworks-manual.orig/src/fr/html/Makefile	2021-04-14 00:00:32.788195315 +0200
++++ texworks-manual/src/fr/html/Makefile	2021-04-14 00:01:48.324020083 +0200
+@@ -7,7 +7,7 @@
+ 
+ IMAGES = $(Logos) $(EpsFromPdf) $(EpsFromPng) ${EpsFromJpg}
+ 
+-HTOPTS = "manual,info,2,imgdir:images/,sec-filename,next,index=2,url-enc,charset=utf-8" " -cmozhtf -utf8" "-S*"
++HTOPTS = "manual,info,2,sec-filename,next,index=2,url-enc,charset=utf-8" " -cmozhtf -utf8" "-S*"
+ 
+ # Ghostscript 9.14/9.15 dropped the 'epswrite' output device in favor of the new
+ # 'eps2write' output device. Prefer the latter, but fallback to the former for

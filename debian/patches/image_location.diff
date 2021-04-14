@@ -1,3 +1,9 @@
+Description: Some images's location are not correctly specified in HTML code.
+Origin: Hilmar Preusse <hille42@web.de>
+Forwarded: Not done, needs to be done.
+Author: Hilmar Preusse <hille42@web.de>
+Last-Update: 20210414
+
 Index: texworks-manual/src/en/html/Makefile
 ===================================================================
 --- texworks-manual.orig/src/en/html/Makefile	2021-04-14 00:00:32.788195315 +0200

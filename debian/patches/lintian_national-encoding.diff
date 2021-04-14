@@ -1,3 +1,9 @@
+Description: We want to build UTF-8 encoded HTML documents.
+Origin: Hilmar Preusse <hille42@web.de>
+Forwarded: https://github.com/TeXworks/manual/issues/8
+Author: Hilmar Preusse <hille42@web.de>
+Last-Update: 20210412
+
 Index: texworks-manual/src/en/html/Makefile
 ===================================================================
 --- texworks-manual.orig/src/en/html/Makefile	2021-04-12 21:33:09.946270122 +0200

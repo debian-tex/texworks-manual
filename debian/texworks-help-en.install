@@ -1,2 +1,7 @@
 src/en/manual.pdf usr/share/doc/texworks-help-en/
-src/en/html/* usr/share/texworks-help/en
+src/en/html/*.html usr/share/texworks-help/en
+src/en/html/*.tex usr/share/texworks-help/en
+src/en/html/*.png usr/share/texworks-help/en
+src/en/html/*.css usr/share/texworks-help/en
+src/en/html/tw-help-title.txt usr/share/texworks-help/en
+src/en/html/images/* usr/share/texworks-help/en/images

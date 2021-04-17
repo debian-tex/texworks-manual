@@ -8,3 +8,7 @@ Section: Text
 
 Format: PDF
 Files: /usr/share/doc/texworks-help-fr/manuel.pdf
+
+Format: HTML
+Index: /usr/share/doc/texworks-help-fr/html/index.html
+Files: /usr/share/doc/texworks-help-fr/html/*.html

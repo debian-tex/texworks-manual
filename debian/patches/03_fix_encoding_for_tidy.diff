@@ -1,0 +1,28 @@
+https://github.com/TeXworks/manual/commit/55827cedddbd29ba3198faa8302e36fe377ead57
+
+Index: texworks-manual/src/en/html/tidy.cfg
+===================================================================
+--- texworks-manual.orig/src/en/html/tidy.cfg	2015-05-07 05:05:00.000000000 +0200
++++ texworks-manual/src/en/html/tidy.cfg	2021-04-21 23:32:47.563976433 +0200
+@@ -4,7 +4,7 @@
+ output-xhtml: yes
+ indent: auto
+ merge-divs: no
+-input-encoding: latin1
++input-encoding: utf8
+ output-encoding: utf8
+ write-back: yes
+ quiet: yes
+Index: texworks-manual/src/fr/html/tidy.cfg
+===================================================================
+--- texworks-manual.orig/src/fr/html/tidy.cfg	2015-05-07 05:05:00.000000000 +0200
++++ texworks-manual/src/fr/html/tidy.cfg	2021-04-21 23:33:00.847958330 +0200
+@@ -4,7 +4,7 @@
+ output-xhtml: yes
+ indent: auto
+ merge-divs: no
+-input-encoding: latin1
++input-encoding: utf8
+ output-encoding: utf8
+ write-back: yes
+ quiet: yes

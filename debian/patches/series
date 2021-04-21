@@ -1,2 +1,3 @@
 01_lintian_national-encoding.diff
 02_image_location.diff
+03_fix_encoding_for_tidy.diff

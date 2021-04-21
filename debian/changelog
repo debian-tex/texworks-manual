@@ -9,7 +9,8 @@ texworks-manual (20210308-2) UNRELEASED; urgency=medium
   * commit 0f5eb67997d8ca5b09c8fc6db3a5c688c04a8bf7: fix references
     to image files.
   * Do not install cruft from build (aux files, log files, Makefiles)
-  * doc-base integration for HTML pages.
+  * doc-base integration for HTML pages. Add lintian override for
+    "doc-base-file-references-wrong-path".
 
  -- Hilmar Preusse <hille42@web.de>  Sat, 10 Apr 2021 16:23:30 +0200
 

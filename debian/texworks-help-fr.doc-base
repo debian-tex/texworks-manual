@@ -10,5 +10,5 @@ Format: PDF
 Files: /usr/share/doc/texworks-help-fr/manuel.pdf
 
 Format: HTML
-Index: /usr/share/doc/texworks-help-fr/html/index.html
-Files: /usr/share/doc/texworks-help-fr/html/*.html
+Index: /usr/share/texworks-help/fr/index.html
+Files: /usr/share/texworks-help/fr/*.html

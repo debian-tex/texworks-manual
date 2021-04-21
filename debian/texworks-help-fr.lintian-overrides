@@ -1,1 +1,2 @@
 texworks-help-fr: package-contains-documentation-outside-usr-share-doc
+texworks-help-fr: doc-base-file-references-wrong-path

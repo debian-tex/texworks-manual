@@ -2,14 +2,22 @@
 
 TEXMFVAR := $(mktemp -d)
 TEXMFCONFIG := $(mktemp -d)
+TEXMFHOME := $(mktemp -d)
+TEXMFCACHE := $(mktemp -d)
 export TEXMFVAR
 export TEXMFCONFIG
+export TEXMFHOME
+export TEXMFCACHE
 
 %:
 	dh $@
 
 override_dh_compress:
 	dh_compress -X.pdf
+
+# FTBFS in sbuild.
+#override_dh_auto_build:
+#	$(MAKE) dist
 
 override_dh_auto_clean:
 	$(MAKE) dist-clean

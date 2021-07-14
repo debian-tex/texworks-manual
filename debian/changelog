@@ -1,10 +1,10 @@
-texworks-manual (20210308-2) UNRELEASED; urgency=medium
+texworks-manual (20210308-2) unstable; urgency=medium
 
   * Add b-d netpbm, to solve FTBFS on Ubuntu (Closes: #986686).
   * Replace b-d (-tex4ht, +texlive-plain-generic)
   * Set upstream metadata fields: Bug-Database, Bug-Submit.
 
- -- Hilmar Preusse <hille42@web.de>  Sat, 10 Apr 2021 16:23:30 +0200
+ -- Hilmar Preusse <hille42@web.de>  Wed, 14 Jul 2021 21:38:28 +0200
 
 texworks-manual (20210308-1) unstable; urgency=medium
 

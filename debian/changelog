@@ -8,6 +8,7 @@ texworks-manual (20210308-3) UNRELEASED; urgency=medium
   * Do not install cruft from build (aux files, log files, Makefiles)
   * doc-base integration for HTML pages. Add lintian override for
     "doc-base-file-references-wrong-path".
+  * Add debian/gbp.conf.
 
  -- Hilmar Preusse <hille42@web.de>  Tue, 20 Jul 2021 09:17:14 +0200
 

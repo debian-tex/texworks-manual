@@ -1,4 +1,6 @@
 *.aux
+*.bbl
+*.blg
 *.idx
 *.toc
 *.log
@@ -19,9 +21,13 @@
 *.xref
 *.synctex.gz
 *.pdf
+*.xbb
+src/*/html/*.bib
+src/*/html/*.bst
 src/*/html/*.tex
 src/*/html/index.css
 src/*/html/*.sty
 src/*/html/images
+src/*/html/index*.png
 /html/
 /pdf/

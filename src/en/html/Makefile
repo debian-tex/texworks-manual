@@ -1,12 +1,12 @@
 MANUAL_LANG=$(notdir $(abspath ..))
 
 Logos = images/Linux.png images/Mac.png images/Windows.png images/TeXworks.png images/example.png
-EpsFromPdf = images/MacCmdKey.eps images/MacOptKey.eps images/interface-summary.eps images/consoleOutput.eps images/errorParsingScript.eps images/LMB.eps images/RMB.eps
-EpsFromPng = images/toolbar1.eps images/toolbar2.eps images/iconTypeset.eps images/iconAbortTypesetting.eps images/replaceDialog.eps images/screenshotHardWrapDlg.eps images/TeXworks.eps images/Linux.eps images/Mac.eps images/Windows.eps
+Pdfs = images/MacCmdKey.pdf images/MacOptKey.pdf images/interface-summary.pdf images/consoleOutput.pdf images/errorParsingScript.pdf images/iconTypeset.pdf images/iconAbortTypesetting.pdf images/LMB.pdf images/RMB.pdf
+Pngs = images/citationsDialog.png images/toolbar1.png images/toolbar2.png images/replaceDialog.png images/screenshotHardWrapDlg.png images/TeXworks.png images/Linux.png images/Mac.png images/Windows.png
 
-IMAGES = $(Logos) $(EpsFromPdf) $(EpsFromPng)
+IMAGES = $(Logos) $(EpsFromPdf) $(EpsFromPng) $(Pngs) $(Pdfs)
 
-HTOPTS = "manual,info,2,imgdir:images/,sec-filename,next,index=2,url-enc" "" "-S*"
+HTOPTS = "manual,info,2,sec-filename,next,index=2,url-enc,charset=utf-8" " -cmozhtf -utf8" "-S*"
 
 # Ghostscript 9.14/9.15 dropped the 'epswrite' output device in favor of the new
 # 'eps2write' output device. Prefer the latter, but fallback to the former for
@@ -19,48 +19,50 @@ CP = $(if $(WINDOWS),copy,cp)
 
 .PHONY : html clean dist-clean dist dist-pdf dist-html
 
-SOURCES = index.tex $(filter-out manual.tex,$(subst ../,,$(wildcard ../*.tex ../*.sty)))
+SOURCES = index.tex $(filter-out manual.tex,$(subst ../,,$(wildcard ../*.tex ../*.sty ../*.bib ../*.bst)))
 
 html : index.html
 
-index.html : $(IMAGES) $(SOURCES) index.ind manual.cfg tex4ht.env
+index.html : $(IMAGES) $(SOURCES) index.ind manual.cfg
 	@htlatex index $(HTOPTS)
+	@bibtex index
 	@htlatex index $(HTOPTS)
 
 %.tex : ../%.tex
 	$(CP) $< $@
 %.sty : ../%.sty
 	$(CP) $< $@
+%.bib : ../%.bib
+	$(CP) $< $@
+%.bst : ../%.bst
+	$(CP) $< $@
 index.tex : ../manual.tex
 	$(CP) $< $@
 
 images/Linux.png : ../images/Linux.pdf
 	@mkdir -p images
-	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
+	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -r300 -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
 images/Mac.png : ../images/Mac.pdf
 	@mkdir -p images
-	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
+	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -r300 -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
 images/Windows.png : ../images/Windows.pdf
 	@mkdir -p images
-	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
+	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -r300 -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
 images/TeXworks.png : ../images/TeXworks.png
 	@mkdir -p images
 	@convert ../images/TeXworks.png -resize 100x100 images/TeXworks.png $(SUPRESSOUT)
 images/example.png : ../images/example.pdf
 	@mkdir -p images
-	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
-images/%.eps : ../images/%.pdf
-	@echo "Creating image $@ (from $<)"
-	@mkdir -p images
-	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=$(GS_DEVICE) -sOutputFile="$@" "$<" $(SUPRESSOUT)
-images/%.eps : ../images/%.png
-	@echo "Creating image $@ (from $<)"
-	@mkdir -p images
-	# Some versions of convert refuse to produce .eps files due to security concerns
-	@convert "$<" "$@" $(SUPRESSOUT) 2$(SUPRESSOUT) || convert "$<" ppm:- | pnmtops -noturn | eps2eps - "$@"
+	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=pngalpha -r300 -sstdout=%stderr -sOutputFile=- "$<" 2$(SUPRESSOUT) | convert png:- -resize 48x48 $@ $(SUPRESSOUT)
+images/%.png : ../images/%.png
+	@cp $< $@
+	@ebb -x $@
+images/%.pdf : ../images/%.pdf
+	@cp $< $@
+	@gs -dSAFER -dBATCH -dNOPAUSE -sDEVICE=bbox "$@" $(SUPRESSOUT) 2> "images/$*.xbb"
 
 
-index.ind : images $(SOURCES) manual.cfg tex4ht.env
+index.ind : images $(SOURCES) manual.cfg
 	@echo "Creating index..."
 	@echo "   running htlatex..."
 	@htlatex index $(HTOPTS)
@@ -70,11 +72,11 @@ index.ind : images $(SOURCES) manual.cfg tex4ht.env
 	@makeindex -o index.ind index.4dx
 
 clean : 
-	rm -f *.tex *.sty idxmake.* *.aux *.log
+	rm -f *.tex *.sty *.bib *.bst idxmake.* *.aux *.bbl *.log
 	rm -f index.4ct index.4tc index.dvi index.idv index.idx index.lg index.log index.out index.tmp index.xref index.4dx index.4ix index.ilg index.ind
 
 dist-clean : clean
-	rm -f *.html index.css
+	rm -f *.html index.css index*.png
 	rm -rf images/
 
 dist : dist-html

@@ -5,8 +5,8 @@
 \chapter{Expressions r{\'e}guli{\`e}res}
 \label{sec:regexp}
 
-Comme \Tw{} est construit sur Qt4, les expressions régulières\index{expressions régulières} -- souvent appelées \emph{regexp} -- disponibles sont un sous-ensemble de celles trouvées dans Qt4. Voir le site de Qt4.
-\footnote{\label{fn.regexpQt}\texttt{http://doc.trolltech.com/4.4/qregexp.html\#details}, -- cette section est basée sur cette information} pour plus d'information. Il est possible de trouver d'autres informations sur les expressions régulières sur le net \footnote{voir par exemple Wikipedia} ou dans des livres. Mais faites attention que tous les systèmes (langages de programmation, éditeurs,...) n'utilisent pas le même ensemble d'instructions; il n'y a malheureusement pas \og d'ensemble standard\fg.
+Comme \Tw{} est construit sur Qt, les expressions régulières\index{expressions régulières} -- souvent appelées \emph{regexp} -- disponibles sont un sous-ensemble de celles trouvées dans Qt. Voir le site de Qt.
+\footnote{\label{fn.regexpQt}\url{https://doc.qt.io/qt-6/qregularexpression.html#details}, -- cette section est basée sur cette information} pour plus d'information. Il est possible de trouver d'autres informations sur les expressions régulières sur le net \footnote{voir par exemple Wikipedia} ou dans des livres. Mais faites attention que tous les systèmes (langages de programmation, éditeurs,...) n'utilisent pas le même ensemble d'instructions; il n'y a malheureusement pas \og d'ensemble standard\fg.
 
 \section{Introduction}
 \index{expressions régulières!introduction}
@@ -22,7 +22,7 @@ Pour définir un ensemble à exclure \footnote{Un ensemble de caractères qui ne
 
 Lorsqu'on utilise les expressions régulières, on doit très souvent créer des chaînes qui représentent d'autres chaînes de façon générale. Si, par exemple, vous cherchez une chaîne qui représente une adresse de courriel, les lettres et symboles vont varier; cependant vous pourriez rechercher toute chaîne correspondant à une adresse de courriel (\texttt{texte@texte.texte} -- en général). Il y a des abréviations pour représenter les lettres, les chiffres, symboles,...
 
-Ces codes remplacent et facilitent la définition d'ensembles; par exemple, pour représenter en toutes lettres les chiffres \textbf{[0-9]}, on peut utiliser \og\textbf{\textbackslash{}d}\fg. Le tableau page suivante liste les codes de remplacement. \footnote{simplifié et traduit de Qt4 chez trolltech, voir note \label{trollnext}\ref{fn.regexpQt}}
+Ces codes remplacent et facilitent la définition d'ensembles; par exemple, pour représenter en toutes lettres les chiffres \textbf{[0-9]}, on peut utiliser \og\textbf{\textbackslash{}d}\fg. Le tableau page suivante liste les codes de remplacement. \footnote{simplifié et traduit de Qt, voir note \ref{fn.regexpQt}}
 \smallskip
 
 \begin{table}
@@ -64,7 +64,7 @@ Pour indiquer le nombre de répétitions, on utilise ce qu'on appelle des \og qu
 
 Ceci peut être combiné à la notation d'ensemble: \textbf{[0-9]\{1,2\}} correspondra à au moins un chiffre et au plus deux, soit les nombres entiers entre 0 et 99. Mais cela correspondra à tout groupe de 1 ou 2 chiffres \emph{dans} une chaîne (il peut y avoir beaucoup de texte avant et après l'entier); si on désire que cela corresponde à l'entièreté de la chaîne avec qu'un ou deux chiffres (sans caractères qui les précèdent ou suivent) nous devrons écrire l'expression régulière comme \textbf{\^{}[0-9]\{1,2\}\$}; ici \textbf{\^{}} précise que la chaîne désirée doit être le premier caractère de la chaîne, le \textbf{\$} le dernier, de sorte qu'il n'y a qu'un ou deux chiffres dans la chaîne (\textbf{\^{}} et \textbf{\$} sont des \og assertions\fg{} -- voir plus loin pour des compléments.)
 
-Voici la table des quantificateurs. \footnote{simplifié de Qt4 chez trolltech, voir note \ref{fn.regexpQt}} E représente une expression (lettre, abréviation, ensemble.)
+Voici la table des quantificateurs. \footnote{simplifié de Qt, voir note \ref{fn.regexpQt}} E représente une expression (lettre, abréviation, ensemble.)
 \smallskip
 
 \noindent\begin{tabular}{Rp{113mm}}
@@ -88,7 +88,7 @@ Lorsqu'on cherche, il est souvent nécessaire de chercher des alternatives, par 
 
 Pour préciser qu'une chaîne doit être considérée comme un mot en soi, nous l'écrirons entourée d'un séparateur/d'un délimiteur de mot (début/fin de phrase, espace): \textbf{\textbackslash{}bpomme\textbackslash{}b}. Pour notre exemple d'alternatives nous les \textbf{grouperons} par des parenthèses et ajouteront les délimiteurs \textbf{\textbackslash{}b(pomme|poire|cerise)\textbackslash{}b}. En plus de \textbf{\textbackslash{}b} nous avons déjà vu \textbf{\^{}} et \textbf{\$} qui marquent les limites de toute ne chaîne.
 
-Voici le tableau des \og assertions\fg{} qui ne correspondent à aucun caractère et ne feront jamais partie du résultat d'une recherche. \footnote{simplifié de Qt4 chez trolltech, voir note \ref{fn.regexpQt}}
+Voici le tableau des \og assertions\fg{} qui ne correspondent à aucun caractère et ne feront jamais partie du résultat d'une recherche. \footnote{simplifié de Qt, voir note \ref{fn.regexpQt}}
 \smallskip
 
 \noindent\begin{tabular}{Rp{113mm}}

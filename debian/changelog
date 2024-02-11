@@ -1,10 +1,7 @@
-texworks-manual (20210308-3) UNRELEASED; urgency=medium
+texworks-manual (20240209-1) UNRELEASED; urgency=medium
 
+  * New upstream release.
   * Add dvipng to b-d, else some files are not created.
-  * Add patch lintian_national-encoding.diff to have UTF-8 encoded
-    HTML pages.
-  * commit 0f5eb67997d8ca5b09c8fc6db3a5c688c04a8bf7: fix references
-    to image files.
   * Do not install cruft from build (aux files, log files, Makefiles)
   * doc-base integration for HTML pages. Add lintian override for
     "doc-base-file-references-wrong-path".

@@ -1,4 +1,4 @@
-texworks-manual (20240209-1) UNRELEASED; urgency=medium
+texworks-manual (20240209-1) unstable; urgency=medium
 
   * New upstream release.
   * Add dvipng to b-d, else some files are not created.
@@ -7,7 +7,7 @@ texworks-manual (20240209-1) UNRELEASED; urgency=medium
     "doc-base-file-references-wrong-path".
   * Add debian/gbp.conf.
 
- -- Hilmar Preusse <hille42@web.de>  Tue, 20 Jul 2021 09:17:14 +0200
+ -- Hilmar Preusse <hille42@web.de>  Sun, 11 Feb 2024 12:13:35 +0000
 
 texworks-manual (20210308-2) unstable; urgency=medium
 

@@ -4,7 +4,7 @@ Source: <https://github.com/TeXworks/manual/releases>
 
 Files: *
 Copyright: 2012-2015 Jonathan Kew <jfkthame AT googlemail DOT com>
-           2012-2019 Stefan Löffler <st DOT loeffler AT gmail DOT com>
+           2012-2024 Stefan Löffler <st DOT loeffler AT gmail DOT com>
            2012-2015 Charlie Sharpsteen <chuck AT sharpsteen DOT net>
            2012-2015 Jérôme Laurens <jerome DOT laurens AT u-bourgogne DOT fr>
            2012-2015 Till Tantau <tantau AT users DOT sourceforge DOT net>
@@ -13,7 +13,7 @@ License: GPL-2+ or CC-BY-SA-3.0
 
 Files: debian/*
 Copyright: 2016-2019 Norbert Preining <preining@debian.org>
-           2021 Hilmar Preusse <hille42@web.de>
+           2021-2025 Hilmar Preuße <hille42@debian.org>
 License: GPL-3+
 
 License: GPL-2+

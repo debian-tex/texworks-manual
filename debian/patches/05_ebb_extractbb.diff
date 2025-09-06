@@ -1,5 +1,5 @@
 Description: "ebb" does not exist any more, replace it by "extractbb".
-Forwarded: no
+Forwarded: https://github.com/TeXworks/manual/issues/16
 Author: Hilmar Preuße <hille42@debian.org>
 Bug-Debian: http://bugs.debian.org/1114404
 Last-Update: 2025-09-05

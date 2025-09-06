@@ -1,3 +1,13 @@
+texworks-manual (20240209-2) UNRELEASED; urgency=medium
+
+  * debian/patches/04_no_git_call.diff: Do not call "git" to determine
+    version.
+  * debian/patches/05_ebb_extractbb.diff: "ebb" does not exist any more,
+    replace it by "extractbb".
+    (Closes: #1114404)
+
+ -- Hilmar Preuße <hille42@debian.org>  Sat, 06 Sep 2025 01:02:56 +0200
+
 texworks-manual (20240209-1) unstable; urgency=medium
 
   * New upstream release.

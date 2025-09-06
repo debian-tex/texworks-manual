@@ -1,0 +1,21 @@
+Description: Do not call "git" to determine version
+Forwarded: not-needed
+Author: Hilmar Preuße <hille42@debian.org>
+Bug-Debian: http://bugs.debian.org/1114404
+Last-Update: 2025-09-05
+
+--- texworks-manual.orig/src/Makefile
++++ texworks-manual/src/Makefile
+@@ -5,9 +5,9 @@
+ 
+ # Be rather specific with '--git-dir' as we do not want to pick up an unrelated
+ # outer Git repository in case the TeXworks manual sources come from an archive.
+-GIT_COMMIT = $(shell LANG=C; git --git-dir=../.git rev-parse --short HEAD || echo "")
+-GIT_DATE_ISO = $(shell LANG=C; git --git-dir=../.git show -s --pretty=%ci HEAD || echo "")
+-GIT_DATE = $(subst -,,$(word 1,$(GIT_DATE_ISO)))$(subst :,,$(word 2,$(GIT_DATE_ISO)))
++#GIT_COMMIT = $(shell LANG=C; git --git-dir=../.git rev-parse --short HEAD || echo "")
++#GIT_DATE_ISO = $(shell LANG=C; git --git-dir=../.git show -s --pretty=%ci HEAD || echo "")
++#GIT_DATE = $(subst -,,$(word 1,$(GIT_DATE_ISO)))$(subst :,,$(word 2,$(GIT_DATE_ISO)))
+ 
+ # If calling git did not succeed (for whatever reason), try to fetch the info
+ # from git_version.txt (which is populated during 'git archive')

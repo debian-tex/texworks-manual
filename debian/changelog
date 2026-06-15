@@ -1,3 +1,10 @@
+texworks-manual (20240209-3) UNRELEASED; urgency=medium
+
+  * Replace full text of CC-BY-SA-3.0 in d/copyright by reference to
+    /usr/share/common-licenses/CC-BY-SA-3.0
+
+ -- Hilmar Preuße <hille42@debian.org>  Mon, 15 Jun 2026 23:30:04 +0200
+
 texworks-manual (20240209-2) unstable; urgency=medium
 
   * Bump Standards version, no changes needed.
